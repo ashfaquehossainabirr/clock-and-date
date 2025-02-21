@@ -1,4 +1,7 @@
-const display = document.querySelector(".display")
+const displayHour = document.querySelector(".hours")
+const displayMinute = document.querySelector(".minutes")
+const displaySecond = document.querySelector(".seconds")
+const displayMeridiem = document.querySelector(".meridiem")
 const displayDate = document.querySelector(".date")
 
 function updateClock() {
@@ -12,7 +15,11 @@ function updateClock() {
     const minutes = now.getMinutes().toString().padStart(2, 0)
     const seconds = now.getSeconds().toString().padStart(2, 0)
 
-    display.innerHTML = `${hours}:${minutes}:${seconds} ${meridiem}`
+    displayHour.innerHTML = hours
+    displayMinute.innerHTML = minutes
+    displaySecond.innerHTML = seconds
+
+    displayMeridiem.innerHTML = meridiem
 }
 
 setInterval(updateClock, 1000)
