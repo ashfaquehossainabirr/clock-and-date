@@ -1,6 +1,6 @@
-const displayHour = document.querySelector(".hours")
-const displayMinute = document.querySelector(".minutes")
-const displaySecond = document.querySelector(".seconds")
+const displayHour = document.querySelector(".hour")
+const displayMinute = document.querySelector(".minute")
+const displaySecond = document.querySelector(".second")
 const displayMeridiem = document.querySelector(".meridiem")
 const displayDate = document.querySelector(".date")
 
@@ -58,7 +58,7 @@ function updateDate() {
     let day = new Date().getDay()
     day = days[day]
 
-    displayDate.innerHTML = `${date}-${month}-${year} (${day})`
+    displayDate.innerHTML = `${day}, ${date} ${month} ${year}`
 }
 
 updateDate()
